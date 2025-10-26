@@ -1,0 +1,241 @@
+{% extends 'layout.html' %}
+
+{% block head %}
+    <title>My Student Profile</title>
+{% endblock %}
+
+{% block body %}
+<!-- HERO SECTION -->
+<div class="card w-100 border-0 rounded-0 vh-100 bg-light">
+    <div class="row g-0 h-100" style="background-color: #F5F7FA;">
+        <div class="col-md-6 overflow-hidden profile-pic">
+            <img src="{{ url_for('static', filename='images/profile.png') }}" 
+                 class="img-fluid h-100 w-100 object-fit-cover" 
+                 alt="Profile Picture">
+        </div>
+        <div class="col-md-6 d-flex flex-column justify-content-center align-items-start p-5"
+             style="background-color: #F5F7FA;">
+            <h1 class="display-4 text-dark fw-bold">Agis Rifaji</h1>
+            <p class="lead text-dark" style="font-style: italic;">Informatic Student from UTY</p>
+            <p class="text-dark fw-semibold">Hi, I'm a <span id="typed"></span></p>
+            <a href="#about-me" class="btn btn-lg mt-3 text-light" style="background-color: #323232;">About Me</a>
+            <div class="social-icons mt-3">
+                <a href="https://www.instagram.com/rifaji_pt" target="_blank" class="text-dark me-3 fs-4">
+                    <i class="bi bi-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/agis-rifaji-6317b8388" target="_blank" class="text-dark me-3 fs-4">
+                    <i class="bi bi-linkedin"></i>
+                </a>
+                <a href="https://www.discord.com/in/absrdentity/" target="_blank" class="text-dark me-3 fs-4">
+                    <i class="bi bi-discord"></i>
+                </a>
+                <a href="https://www.github.com/absrdentity" target="_blank" class="text-dark fs-4">
+                    <i class="bi bi-github"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- CARD INFO -->
+<div class="container-fluid text-center py-5" style="background-color: #323232;" id="about-me">
+  <div class="row g-4 justify-content-center">
+    <div class="col-md-3">
+      <div class="card bg-dark text-light border-0 shadow-sm h-100">
+        <div class="card-body">
+          <h5 class="fw-bold">NIM</h5>
+          <p>5240411229</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card bg-dark text-light border-0 shadow-sm h-100">
+        <div class="card-body">
+          <h5 class="fw-bold">Asal</h5>
+          <p>Yogyakarta</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card bg-dark text-light border-0 shadow-sm h-100">
+        <div class="card-body">
+          <h5 class="fw-bold">Angkatan</h5>
+          <p>2024</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid about-section" style="background-color: #F5F7FA;">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-md-6">
+        <img src="{{ url_for('static', filename='images/about.jpg') }}" 
+             alt="About Me" 
+             class="img-fluid about-image">
+      </div>
+      <div class="col-md-6" style="background-color: #F5F7FA;">
+        <h2 class="about-title">About Me</h2>
+        <p class="about-text">
+          Hi! I’m <span class="about-highlight">Agis Rifaji</span>, an Informatics student from UTY. passionate about
+          <span class="about-highlight">technology, creativity, and problem-solving</span>.
+          I love exploring how software can impact people’s lives — from developing intuitive apps
+          to crafting meaningful user experiences.
+        </p>
+        <p class="about-text">
+          Outside of coding, I’m a <span class="about-highlight">photography enthusiast</span>
+          and enjoy expressing ideas through design and visuals. I believe technology and art can
+          go hand in hand to create something powerful.
+        </p>
+        <p class="about-text">
+          My goal is to grow into a <span class="about-highlight">full-stack developer</span> who builds
+          innovative, user-focused products that make a real impact.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SKILLS SECTION -->
+<section class="skills-section py-5" style="background-color: #F5F7FA;">
+  
+  <h2 class="text-center mb-5">Skills</h2>
+  <div class="container-fluid px-4">
+    <div class="card skills-card mx-auto">
+      <div class="card-reader">
+        <ul class="nav nav-tabs justify-content-center skills-nav">
+          <li class="nav-item">
+            <a class="nav-link active fw-semibold" data-target="programming" href="#">Programming</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-semibold" data-target="design" href="#">Design</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-semibold" data-target="video-editing" href="#">Video Editing</a>
+          </li>
+        </ul>
+
+        <div class="skills-content position-relative p-4">
+          <!-- PROGRAMMING -->
+          <div class="tab-pane active" id="programming">
+            <div class="row row-cols-1 row-cols-md-2 g-4">
+              <div class="col">
+                <div class="skill-label"><span>Python</span><span>90%</span></div>
+                <div class="progress"><div class="progress-bar" style="width: 90%; background: linear-gradient(90deg, #0072ff, #00c6ff);"></div></div>
+              </div>
+              <div class="col">
+                <div class="skill-label"><span>JavaScript</span><span>40%</span></div>
+                <div class="progress"><div class="progress-bar" style="width: 40%; background: linear-gradient(90deg, #ff9966, #ff5e62);"></div></div>
+              </div>
+              <div class="col">
+                <div class="skill-label"><span>Flutter</span><span>75%</span></div>
+                <div class="progress"><div class="progress-bar" style="width: 75%; background: linear-gradient(90deg, #00c6ff, #0072ff);"></div></div>
+              </div>
+              <div class="col">
+                <div class="skill-label"><span>Bootstrap</span><span>75%</span></div>
+                <div class="progress"><div class="progress-bar" style="width: 75%; background: linear-gradient(90deg, #8E2DE2, #4A00E0);"></div></div>
+              </div>
+              <div class="col">
+                <div class="skill-label"><span>Lua</span><span>50%</span></div>
+                <div class="progress"><div class="progress-bar" style="width: 50%; background: linear-gradient(90deg, #11998e, #38ef7d);"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- DESIGN -->
+          <div class="tab-pane" id="design">
+            <div class="row row-cols-1 row-cols-md-2 g-4">
+              <div class="col">
+                <div class="skill-label"><span>Figma</span><span>70%</span></div>
+                <div class="progress"><div class="progress-bar" style="width: 70%; background: linear-gradient(90deg, #f7971e, #ffd200);"></div></div>
+              </div>
+              <div class="col">
+                <div class="skill-label"><span>Adobe Photoshop</span><span>60%</span></div>
+                <div class="progress"><div class="progress-bar" style="width: 60%; background: linear-gradient(90deg, #ff512f, #dd2476);"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- VIDEO EDITING -->
+          <div class="tab-pane" id="video-editing">
+            <div class="row row-cols-1 row-cols-md-2 g-4">
+              <div class="col">
+                <div class="skill-label"><span>Adobe Premiere Pro</span><span>65%</span></div>
+                <div class="progress"><div class="progress-bar" style="width: 65%; background: linear-gradient(90deg, #e52d27, #b31217);"></div></div>
+              </div>
+              <div class="col">
+                <div class="skill-label"><span>CapCut</span><span>50%</span></div>
+                <div class="progress"><div class="progress-bar" style="width: 50%; background: linear-gradient(90deg, #4b6cb7, #182848);"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- LANGUAGES SPOKEN -->
+<div class="card skills-card mx-auto mt-5">
+  <div class="card-reader">
+    <h4 class="text-center py-3 fw-semibold" style="color: #1E2A35; background-color:#d5deeb">Languages Spoken</h4>
+
+    <div class="skills-content position-relative p-4">
+      <div class="tab-pane active" id="languages">
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+          <div class="col">
+            <div class="skill-label"><span>Indonesian</span><span>Native</span></div>
+            <div class="progress">
+              <div class="progress-bar" style="width: 100%; background: linear-gradient(90deg, #0072ff, #00c6ff);"></div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="skill-label"><span>English</span><span>Fluent</span></div>
+            <div class="progress">
+              <div class="progress-bar" style="width: 80%; background: linear-gradient(90deg, #8E2DE2, #4A00E0);"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- QUOTE -->
+<!-- py = padding vertical -->
+<div class="container-fluid text-center py-5" style="background-color: #F5F7FA;">
+  <blockquote class="blockquote mb-0">
+    <p class="fs-2 fst-italic">
+      "Education is the most powerful weapon which you can use to change the world"
+    </p>
+    <footer class="blockquote-footer mt-3">Nelson Mandela</footer>
+  </blockquote>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+  var typed = new Typed("#typed", {
+    strings: ["STUDENT", "FUTURE DEVELOPER", "DREAMER", "PHOTOGRAPHER", "DEEP THINKER", "LEARNER","TECH ENTHUSIAST", "GAMER"],
+    typeSpeed: 80,
+    backSpeed: 50,
+    backDelay: 1500,
+    loop: true
+  });
+  document.querySelectorAll('.skills-nav .nav-link').forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+
+      // Deactivate all tabs and panes
+      document.querySelectorAll('.skills-nav .nav-link').forEach(l => l.classList.remove('active'));
+      document.querySelectorAll('.tab-pane').forEach(pane => pane.classList.remove('active'));
+
+      // Activate clicked tab and its pane
+      link.classList.add('active');
+      const target = link.getAttribute('data-target');
+      document.getElementById(target).classList.add('active');
+    });
+  });
+</script>
+{% endblock %}
